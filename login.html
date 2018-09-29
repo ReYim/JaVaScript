@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function username()
+        {
+            document.getElementById("warning").innerHTML="请输入用户名";
+            setTimeout("clean()",3000);
+        }
+
+        function userpass()
+        {
+            document.getElementById("warningpass").innerHTML="请输入密码";
+        }
+
+        function ym()
+        {
+            document.getElementById("yongmi").innerHTML="用户名或密码错误";
+        }
+
+        function check()
+        {
+            var control=document.getElementById("login").value;
+            var control1=document.getElementById("pass").value;
+
+            if((control=="123456") && (control1=="654321"))
+            {
+                window.location.href="https://www1.szu.edu.cn/szu.asp";
+            }
+
+
+            else if(control=="")
+            {
+                username();
+            }
+
+            else if(control1=="")
+            {
+                userpass();
+            }
+
+            else
+            {
+                ym();
+            }
+
+        }
+
+
+    </script>
+
+
+    <style>
+        #框架
+        {
+            border: 1px;
+            width: 400px;
+            height: 400px;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 50px;
+            text-align: center;
+            background: #ffffff;
+            display: block;
+            opacity: 0.91;
+        }
+
+
+
+
+    </style>
+
+</head>
+<body background="文山湖.jpg" style=" background-repeat:no-repeat;background-size:100% 100%;background-attachment: fixed;">
+
+
+    <img style="margin-left: 700px;margin-top:100px" src="logo.png" alt=""/>
+
+    <div id="框架">
+        <p style="margin-right: -30px;margin-top: 5px;"><img src="统一身份认证.png" alt=""></p>
+        <span id="yongmi" style="color: red;font-size: 2px;margin-left: 10px"></span>
+
+        <p id="登录" style="margin-right: 200px">
+            <img src="登录图片.png" alt="">
+        </p>
+        
+        <p style="margin-top: -53px;margin-left: 48px">
+            <input id="login" type="text" placeholder="输入学工号" style="width: 210px;height: 28px;background:#faffbd;"> <br>
+            <span id="warning" style="font-size: 2px;margin-right: 148px;color: red"></span>
+        </p>
+
+        <p id="密码" style="margin-right: 200px">
+            <img src="密码.png" alt="">
+        </p>
+
+        <p style="margin-top: -53px;margin-left: 48px">
+            <input id="pass" type="password" placeholder="输入密码" style="width: 210px;height: 28px;background:#faffbd"> <br>
+            <span id="warningpass" style="font-size: 2px;margin-right: 148px;color: red"></span>
+
+        </p>
+
+        <p style="margin-right: 130px">
+            <input type="checkbox" style="width: 15px;height: 15px;">
+            <label style="font-size:12px;">一周内免登录</label>
+        </p>
+
+        <a style="margin-right: 50px;font-size: 12px;text-decoration: underline;color:#4e89cc;"href="https://www1.szu.edu.cn/v.asp?id=136" target="_blank">不知道密码？请点击《使用说明》</a>
+        <br>
+        <br>
+        <button onclick="check()" type="submit" style="background: #1ab394;color: aliceblue;height: 34px;width: 250px;margin-left: 18px">登录</button>
+        <br>
+        <br>
+        <a style="margin-right: 170px;font-size: 12px;text-decoration:underline;color:#4e89cc;"href="https://authserver.szu.edu.cn/authserver/getBackPasswordMainPage.do?service=https%3A%2F%2Felearning.szu.edu.cn%2Fwebapps%2Fcbb-sdgxtyM-BBLEARN%2FcasSSO.jsp" target="_blank">忘记密码？</a>
+
+            <div style="width: 50px;height: 50px;margin-top: 150px;margin-left: 150px">
+                <img src="mycode.png" alt="">
+            </div>
+
+
+</body>
+
+</html>
